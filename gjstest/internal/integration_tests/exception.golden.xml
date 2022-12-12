@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Google JS tests" failures="11" time="0.01">
+ <testcase name="ExceptionTest.ReferenceError" time="0.01">
+  <failure><![CDATA[ReferenceError: fooBar is not defined
+
+Stack:
+    exception_test.js:23
+    register.js:176
+    run_test.js:37]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.NotAFunctionError" time="0.01">
+  <failure><![CDATA[TypeError: foo is not a function
+
+Stack:
+    exception_test.js:28
+    register.js:176
+    run_test.js:37]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.ErrorInMatcherFactory" time="0.01">
+  <failure><![CDATA[TypeError: isNearNumber requires two number arguments
+        at exception_test.js:32]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.StackOverflow" time="0.01">
+  <failure><![CDATA[RangeError: Maximum call stack size exceeded
+
+Stack:
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.UnknownPropertyOnLongFunction" time="0.01">
+  <failure><![CDATA[TypeError: foo.bar is not a function
+
+Stack:
+    exception_test.js:45
+    register.js:176
+    run_test.js:37]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.ObjectLiteralException" time="0.01">
+  <failure><![CDATA[{ name: 'SomeException' }
+
+Stack:
+    (Empty)]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.CustomExceptionClassWithoutStack" time="0.01">
+  <failure><![CDATA[{}
+
+Stack:
+    (Empty)]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.CustomExceptionClassWithStack" time="0.01">
+  <failure><![CDATA[{}
+
+Stack:
+    exception_test.js:63
+    register.js:176
+    run_test.js:37]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.CustomExceptionClassWithToString" time="0.01">
+  <failure><![CDATA[SomeException
+
+Stack:
+    (Empty)]]></failure>
+ </testcase>
+ <testcase name="ExceptionTest.PassingTest" time="0.01"/>
+ <testcase name="ExceptionTest.ExceptionWithUnsatisfiedMockExpectations" time="0.01">
+  <failure><![CDATA[TypeError: bar is not a function
+
+Stack:
+    exception_test.js:82
+    register.js:176
+    run_test.js:37]]></failure>
+ </testcase>
+ <testcase name="ThrowingConstructorTest.SomeTest" time="0.01">
+  <failure><![CDATA[Error: taco
+
+Stack:
+    exception_test.js:87
+    register.js:175
+    run_test.js:37]]></failure>
+ </testcase>
+</testsuite>

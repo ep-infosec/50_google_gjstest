@@ -1,0 +1,105 @@
+[----------]
+[ RUN      ] ExceptionTest.ReferenceError
+ReferenceError: fooBar is not defined
+
+Stack:
+    exception_test.js:23
+    register.js:176
+    run_test.js:37
+
+[  FAILED  ] ExceptionTest.ReferenceError (1 ms)
+[ RUN      ] ExceptionTest.NotAFunctionError
+TypeError: foo is not a function
+
+Stack:
+    exception_test.js:28
+    register.js:176
+    run_test.js:37
+
+[  FAILED  ] ExceptionTest.NotAFunctionError (1 ms)
+[ RUN      ] ExceptionTest.ErrorInMatcherFactory
+TypeError: isNearNumber requires two number arguments
+        at exception_test.js:32
+
+[  FAILED  ] ExceptionTest.ErrorInMatcherFactory (1 ms)
+[ RUN      ] ExceptionTest.StackOverflow
+RangeError: Maximum call stack size exceeded
+
+Stack:
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+    exception_test.js:36
+
+[  FAILED  ] ExceptionTest.StackOverflow (1 ms)
+[ RUN      ] ExceptionTest.UnknownPropertyOnLongFunction
+TypeError: foo.bar is not a function
+
+Stack:
+    exception_test.js:45
+    register.js:176
+    run_test.js:37
+
+[  FAILED  ] ExceptionTest.UnknownPropertyOnLongFunction (1 ms)
+[ RUN      ] ExceptionTest.ObjectLiteralException
+{ name: 'SomeException' }
+
+Stack:
+    (Empty)
+
+[  FAILED  ] ExceptionTest.ObjectLiteralException (1 ms)
+[ RUN      ] ExceptionTest.CustomExceptionClassWithoutStack
+{}
+
+Stack:
+    (Empty)
+
+[  FAILED  ] ExceptionTest.CustomExceptionClassWithoutStack (1 ms)
+[ RUN      ] ExceptionTest.CustomExceptionClassWithStack
+{}
+
+Stack:
+    exception_test.js:63
+    register.js:176
+    run_test.js:37
+
+[  FAILED  ] ExceptionTest.CustomExceptionClassWithStack (1 ms)
+[ RUN      ] ExceptionTest.CustomExceptionClassWithToString
+SomeException
+
+Stack:
+    (Empty)
+
+[  FAILED  ] ExceptionTest.CustomExceptionClassWithToString (1 ms)
+[ RUN      ] ExceptionTest.PassingTest
+[       OK ] ExceptionTest.PassingTest (1 ms)
+[ RUN      ] ExceptionTest.ExceptionWithUnsatisfiedMockExpectations
+TypeError: bar is not a function
+
+Stack:
+    exception_test.js:82
+    register.js:176
+    run_test.js:37
+
+[  FAILED  ] ExceptionTest.ExceptionWithUnsatisfiedMockExpectations (1 ms)
+[----------]
+
+[----------]
+[ RUN      ] ThrowingConstructorTest.SomeTest
+Error: taco
+
+Stack:
+    exception_test.js:87
+    register.js:175
+    run_test.js:37
+
+[  FAILED  ] ThrowingConstructorTest.SomeTest (1 ms)
+[----------]
+
+[  FAILED  ]
